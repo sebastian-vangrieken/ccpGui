@@ -28,17 +28,17 @@ int WINAPI wWinMain(
     RegisterClass(&wc);
 
     HWND hwnd = CreateWindowEx(
-        0,
-        CLASS_NAME,
-        L"Learn to Program Windows",
-        WS_OVERLAPPEDWINDOW,
+        0, // DWORD dwExStyle
+        CLASS_NAME, // LPCSTR lpClassName
+        L"Learn to Program Windows", // LPCSTR lpWindowName
+        WS_OVERLAPPEDWINDOW, // DWORD dwStyle
 
-        CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
+        CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, // int X, int Y, int nWidth, int nHeight
 
-        NULL,
-        NULL,
-        hInstance,
-        NULL
+        NULL, // HWND hwndParent
+        NULL, // HMENU hMenu
+        hInstance, // HINSTANCE hInstance
+        NULL // LPVOID lpParam
     );
 
     if (hwnd == NULL) {
