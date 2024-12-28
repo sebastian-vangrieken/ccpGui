@@ -1,0 +1,17 @@
+https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-wndclassexa
+
+typedef struct tagWNDCLASSA {
+  UINT      style;
+  WNDPROC   lpfnWndProc;
+  int       cbClsExtra;
+  int       cbWndExtra;
+  HINSTANCE hInstance;
+  HICON     hIcon;
+  HCURSOR   hCursor;
+  HBRUSH    hbrBackground;
+  LPCSTR    lpszMenuName;
+  LPCSTR    lpszClassName;
+} WNDCLASSA, *PWNDCLASSA, *NPWNDCLASSA, *LPWNDCLASSA;
+
+
+lpfnWndProc is a pointer to an application-defined function called the window procedure or window proc. The window procedure defines most of the behavior of the window. For now, this value is a forward declaration of a function.
